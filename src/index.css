@@ -50,6 +50,6 @@
 
 @theme {
   --font-sans: "IRANSansX", system-ui, -apple-system, sans-serif;
-  --breakpoint-sm: 22.62rem;
+  --breakpoint-xs: 22.62rem;
 
 }
