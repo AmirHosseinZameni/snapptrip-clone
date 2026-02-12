@@ -3,7 +3,7 @@ import DropIcon from "./DropIcon";
 import Table from "./Table";
 export default function RulesSection() {
   return (
-    <div className="mt-12">
+    <div className="mt-12 xl:max-w-300 xl:mx-auto ">
       <div className="mx-6 flex flex-col gap-2">
         <h4 className="font-medium text-[16px]">
           قوانین حمل بار ایرلاین های تهران لندن
@@ -26,7 +26,7 @@ export default function RulesSection() {
           </p>
         </div>
       </div>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto scrollbar-hide">
         <Table />
       </div>
       <div className="mx-6 mt-6 flex flex-col gap-2">

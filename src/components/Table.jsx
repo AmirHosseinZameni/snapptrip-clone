@@ -2,7 +2,7 @@ import AirLineLogoIcon from "./icons/AirLineLogoIcon";
 
 export default function Table() {
   return (
-    <div className="shrink-0 w-148 mx-6 mt-9 rounded-xl overflow-hidden">
+    <div className="shrink-0 w-148 mx-6 mt-9 rounded-xl overflow-hidden md:w-180 lg:w-250 xl:w-300 xl:max-w-300 md:mx-auto ">
       <table className="table-fixed border-collapse w-full font-regular text-[14px]">
         <thead className="font-bold text-[14px] bg-[#F8F9FD] text-right">
           <tr className="h-14">

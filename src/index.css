@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import 'tailwind-scrollbar-hide/v4';
 
 @font-face {
   font-family: "IRANSansX";
@@ -50,6 +51,6 @@
 
 @theme {
   --font-sans: "IRANSansX", system-ui, -apple-system, sans-serif;
-  --breakpoint-xs: 22.62rem;
+  --breakpoint-xs: 22.5rem;
 
 }

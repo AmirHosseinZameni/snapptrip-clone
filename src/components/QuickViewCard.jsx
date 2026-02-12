@@ -1,6 +1,6 @@
-export default function QuickViewCard({text, subText, img}) {
+export default function QuickViewCard({text, subText, img,}) {
   return (
-    <div className="w-full h-20 bg-white pt-4 pb-4 pr-4 flex items-center gap-2 rounded-lg">
+    <div className="w-full h-20 bg-white pt-4 pb-4 pr-4 flex items-center gap-2 rounded-lg md:h-25 lg:h-46">
       <div>
         <img src={img} alt="yo" className="w-12 h-12" />
       </div>

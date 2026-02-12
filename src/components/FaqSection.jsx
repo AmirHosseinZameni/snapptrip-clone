@@ -1,7 +1,7 @@
 import Faq from "./Faq";
 export default function FaqSection() {
   return (
-    <div className="mx-6 mt-12 flex flex-col gap-4">
+    <div className="mx-6 mt-12 flex flex-col gap-4 xl:max-w-300 xl:mx-auto">
       <div className="flex gap-2">
         <img src="/assets/helpoutline.svg" alt="help" />
         <h3>سوالات متداول</h3>

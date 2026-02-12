@@ -2,10 +2,10 @@ import PopularFlightCard from "./PopularFlightCard";
 
 export default function PopularFlightsSection() {
   return (
-    <div className="mt-12 mr-6">
+    <div className="mt-12 mr-6 xl:max-w-300 xl:mx-auto">
       <div className="flex flex-col gap-4">
         <h3 className="font-medium text-[19px] text-[#040A1FDE]">پرطرفدار ترین پرواز های استانبول</h3>
-        <div className="overflow-x-auto flex gap-4 ">
+        <div className="overflow-x-auto flex gap-4 scrollbar-hide">
           <PopularFlightCard />
           <PopularFlightCard />
         </div>

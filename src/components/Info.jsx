@@ -3,17 +3,17 @@ import Button from "./Button";
 
 export default function Info() {
   return (
-    <div className="bg-[#F8F9FD] p-4 grid  grid-cols-1 rounded-2xl gap-4 mx-6 mt-12">
+    <div className="bg-[#F8F9FD] p-4 grid  grid-cols-1 rounded-2xl gap-4 mx-6 mt-12 lg:grid-cols-2 xl:max-w-300 xl:mx-auto">
       {/* Image Section */}
-      <div className="flex justify-center">
+      <div className="flex justify-center w-full lg:order-2">
         <img
           src="/assets/ist-info.png"
           alt="ist image"
-          className=" rounded-lg"
+          className=" rounded-lg sm:object-cover w-full"
         />
       </div>
       {/* Details Section */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 lg:order-1">
         {/* Text Section */}
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
