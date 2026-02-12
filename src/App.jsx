@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import FlightCards from "./components/FlightCards";
 import QuickView from "./components/QuickView";
 import Info from "./components/Info";
+import CitiesSection from "./components/CitiesSection";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       </CardSection>
       <QuickView />
       <Info/>
+      <CitiesSection/>
     </>
   );
 }
