@@ -10,7 +10,7 @@ export default function QuickView() {
         </p>
       </div>
       {/* Body */}
-      <div className="bg-[#F8F9FD] p-4 grid  grid-cols-1 rounded-2xl gap-2">
+      <div className="bg-[#F8F9FD] p-4 grid  grid-cols-1 rounded-2xl gap-2 sm:grid-cols-2">
         <QuickViewCard text="جاذبه گردشگری" subText="+200" img="/assets/vector1.png"/>
         <QuickViewCard text="پرواز روزانه" subText="+100" img="/assets/vector2.png"/>
         <QuickViewCard text="اقامتگاه" subText="+500" img="/assets/vector3.png"/>

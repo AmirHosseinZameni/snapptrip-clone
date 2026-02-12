@@ -1,4 +1,4 @@
-export default function DropIcon() {
+export default function DropIcon({color="#040A1F"}) {
   return (
     <svg
       width="18"
@@ -9,7 +9,7 @@ export default function DropIcon() {
     >
       <path
         d="M5.5575 6.44238L9 9.87738L12.4425 6.44238L13.5 7.49988L9 11.9999L4.5 7.49988L5.5575 6.44238Z"
-        fill="#040A1F"
+        fill={color}
         fill-opacity="0.87"
       />
     </svg>

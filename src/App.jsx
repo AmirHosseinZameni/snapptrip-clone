@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import HeroSection from "./components/HeroSection";
 import FlightCards from "./components/FlightCards";
 import QuickView from "./components/QuickView";
+import Info from "./components/Info";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <FlightCards />
       </CardSection>
       <QuickView />
+      <Info/>
     </>
   );
 }
