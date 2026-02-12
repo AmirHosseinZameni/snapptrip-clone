@@ -10,6 +10,7 @@ import PopularFlightsSection from "./components/PopularFlightsSection";
 import AirLinesSection from "./components/AirLinesSection";
 import FaqSection from "./components/FaqSection";
 import RulesSection from "./components/RulesSection";
+import PopularFlightRoutesSection from "./components/PopularFlightRoutesSection";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
       <AirLinesSection />
       <FaqSection />
       <RulesSection/>
-
+      <PopularFlightRoutesSection/>
     </>
   );
 }
