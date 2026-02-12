@@ -1,9 +1,9 @@
 import FlightCards from "./FlightCards";
 import Button from "./Button";
 
-export default function CardSection() {
+export default function CardSection({children,style}) {
   return (
-    <div className="mx-6 flex flex-col gap-4 ">
+    <div className={`mr-6 flex flex-col gap-4 ${style}`}>
       {/* Section Header */}
       <div>
         <p className="font-medium text-[16px] leading-6">
@@ -32,7 +32,8 @@ export default function CardSection() {
       </div>
 
       {/* Cards */}
-      <FlightCards />
+      {/* <FlightCards /> */}
+      {children}
     </div>
   );
 }

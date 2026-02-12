@@ -13,11 +13,11 @@ export default function HeroSection() {
       </div>
       {/* Hero flight Box */}
       <div className="pl-6 pr-6 pt-4 xs:p-0 xs:h-100 sm:bg-[url('/assets/backgroud.png')] xs:bg-cover xs:flex xs:items-end xs:mt-25">
-        <div className=" xs:bg-white xs:w-full xs:max-w-120 xs:mb-10 xs:mx-auto xs:rounded-lg">
-          <div className="xs:border-b xs:border-[#EBECF2] xs:pl-10 xs:pr-10 xs:pt-3.5 xs:pb-3.5 ">
+        <div className=" xs:bg-white xs:w-full  xs:mx-6 xs:rounded-lg">
+          <div className="xs:border-b xs:border-[#EBECF2]  xs:pt-3.5 xs:pb-3.5 ">
             <h1>بلیط هواپیما X</h1>
           </div>
-          <div className="pt-6  xs:pl-10 xs:pr-10 xs:flex xs:flex-col xs:gap-6">
+          <div className="pt-6   xs:flex xs:flex-col xs:gap-6">
             <div className="pb-6 xs:pb-0">
               <Button className="flex gap-2 items-center text-[#575EFF] border pt-1 rounded-4xl pb-1 pr-3 pl-2 text-[14px] font-medium h-8 max-w-23">
                 <span>یک‌طرفه</span>
