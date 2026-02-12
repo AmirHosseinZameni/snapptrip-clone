@@ -8,6 +8,7 @@ import Info from "./components/Info";
 import CitiesSection from "./components/CitiesSection";
 import PopularFlightsSection from "./components/PopularFlightsSection";
 import AirLinesSection from "./components/AirLinesSection";
+import FaqSection from "./components/FaqSection";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <CitiesSection/>
       <PopularFlightsSection/>
       <AirLinesSection/>
+      <FaqSection/>
     </>
   );
 }
