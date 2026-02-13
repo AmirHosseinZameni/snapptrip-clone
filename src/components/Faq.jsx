@@ -14,13 +14,11 @@ export default function Faq({ question, answer, id }) {
         onClick={() => handleIsOpen(id)}
       >
         <span className="font-medium text-sm">{question}</span>
-        <DropIcon color="#575EFF" />
+        <DropIcon color="#575EFF" className={isOpen === id ? "rotate-180" : ""}/>
       </div>
 
       {isOpen === id && (
-        <span className="w-full font-regular text-sm text-right">
-          {answer}
-        </span>
+        <span className="w-full font-regular text-sm text-right">{answer}</span>
       )}
     </div>
   );

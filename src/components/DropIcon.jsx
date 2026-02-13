@@ -1,4 +1,4 @@
-export default function DropIcon({color="#040A1F", style}) {
+export default function DropIcon({color="#040A1F", className}) {
   return (
     <svg
       width="18"
@@ -6,7 +6,7 @@ export default function DropIcon({color="#040A1F", style}) {
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={style}
+      className={className}
     >
       <path
         d="M5.5575 6.44238L9 9.87738L12.4425 6.44238L13.5 7.49988L9 11.9999L4.5 7.49988L5.5575 6.44238Z"
