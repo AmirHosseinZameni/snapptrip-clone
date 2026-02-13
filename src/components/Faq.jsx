@@ -1,11 +1,27 @@
+import { useState } from "react";
 import DropIcon from "./DropIcon";
-export default function Faq() {
+
+export default function Faq({ question, answer, id }) {
+  const [isOpen, setIsOpen] = useState("");
+
+  function handleIsOpen(id) {
+    id === isOpen ? setIsOpen("") : setIsOpen(id);
+  }
   return (
-    <div className="w-full h-12 py-3 px-4 flex justify-between items-center ring-1 ring-[#EBECF2] rounded-sm">
-      <span className="font-medium text-[14px]">
-        میزان بار مجاز برای هر بلیط چقدر است؟
-      </span>
-      <DropIcon color="#575EFF" />
+    <div className="cursor-pointer w-full  py-3 px-4 flex flex-col gap-2 justify-between items-center ring-1 ring-[#EBECF2] rounded-sm">
+      <div
+        className="flex justify-between w-full"
+        onClick={() => handleIsOpen(id)}
+      >
+        <span className="font-medium text-sm">{question}</span>
+        <DropIcon color="#575EFF" />
+      </div>
+
+      {isOpen === id && (
+        <span className="w-full font-regular text-sm text-right">
+          {answer}
+        </span>
+      )}
     </div>
   );
 }

@@ -53,5 +53,12 @@
 @theme {
   --font-sans: "IRANSansX", system-ui, -apple-system, sans-serif;
   --breakpoint-xs: 22.5rem;
+  
 
 }
+
+/* @utility{
+  scrollBarhid{
+
+  }
+} */
