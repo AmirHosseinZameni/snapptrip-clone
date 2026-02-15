@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 import SwapVert from "./icons/SwapVert";
 import RadioField from "./RadioField";
+import LocationSelector from "./HeroSection/LocationSelector";
 
 export default function HeroSection() {
   const [isTripTypeOpen, setIsTripTypeOpen] = useState(false);
@@ -126,6 +127,7 @@ export default function HeroSection() {
                 </span>
                 <div className="border-b border-[#a0a2aa] p-4 xl:flex-1 xl:border-none ">
                   <Button>مبدا</Button>
+                  <LocationSelector />
                 </div>
 
                 <Button className="absolute left-5 top-11 bg-white xl:top-4 xl:left-60 xl:rotate-90">
