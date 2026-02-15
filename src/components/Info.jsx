@@ -24,7 +24,7 @@ export default function Info() {
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <h2 className="font-medium text-[19px]">درباره استانبول</h2>
-            <p className={` font-regular text-sm text-[#040A1F99] ${isOpen? "" : "line-clamp-7"}` }>
+            <p className={` font-regular text-sm text-[#040A1F99] ${isOpen? "" : "line-clamp-10"}` }>
               خرید بلیط هواپیما به‌عنوان نخستین گام سفر لازم است که بهترین
               تجربه‌ی خرید آنلاین خدمات سفر باشد تا با خیالی راحت به مراحل بعدی
               سفر قدم بگذارید. با خرید آنلاین بلیط هواپیما از اسنپ‌تریپ، راحت و
