@@ -1,6 +1,37 @@
+import { useState } from "react";
 import Button from "./Button";
 import SwapVert from "./icons/SwapVert";
+import RadioField from "./RadioField";
+
 export default function HeroSection() {
+  const [isTripTypeOpen, setIsTripTypeOpen] = useState(false);
+  const [tripType, setTriptype] = useState("one-way");
+
+  function handleOpenTripType() {
+    return setIsTripTypeOpen((curr) => !curr);
+  }
+  function handleCloseTripType() {
+    return setIsTripTypeOpen(false);
+  }
+  function handleSetTripType(e) {
+    if (e === isTripTypeOpen) {
+      setIsTripTypeOpen(false);
+    } else {
+      setTriptype(e);
+      setIsTripTypeOpen(false);
+    }
+  }
+
+  // useEffect(
+  //   function () {
+  //     async function handleCloseTripType() {
+  //       setIsTripTypeOpen(false)
+  //     }
+  //     handleCloseTripType();
+  //   },
+  //   [tripType],
+  // );
+
   return (
     <>
       {/* Mobile Hero Image */}
@@ -18,9 +49,14 @@ export default function HeroSection() {
             <h1>بلیط هواپیما استانبول</h1>
           </div>
           <div className="pt-6 xs:flex xs:flex-col xs:gap-6 xl:px-10">
-            <div className="pb-6 xs:pb-0">
-              <Button className="flex gap-2 items-center text-[#575EFF] border pt-1 rounded-4xl pb-1 pr-3 pl-2 text-[14px] font-medium h-8 max-w-23">
-                <span>یک‌طرفه</span>
+            <div className="pb-6 xs:pb-0 md:relative">
+              <Button
+                onClick={handleOpenTripType}
+                className="flex gap-2 items-center text-[#575EFF] border pt-1 rounded-4xl pb-1 pr-3 pl-2 text-[14px] font-medium h-8 max-w-33"
+              >
+                <span>
+                  {tripType === "one-way" ? "یک‌طرفه" : "رفت و برگشت"}
+                </span>
                 <span>
                   <svg
                     width="18"
@@ -44,11 +80,50 @@ export default function HeroSection() {
                   </svg>
                 </span>
               </Button>
+              {/* TripTypeSelector */}
+
+              {isTripTypeOpen ? (
+                <>
+                  <div className="shadow-lg bg-white p-4 w-full fixed bottom-0 left-0 z-50 rounded-t-xl md:absolute md:max-w-56 md:top-full md:right-0 md:bg-white md:h-38 md:rounded-xl ">
+                    <div className="flex justify-between mb-4">
+                      <span className="font-medium">نوع مسیر</span>
+                      <span onClick={handleCloseTripType}>x</span>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <RadioField
+                        id="one-way"
+                        label="یک طرفه"
+                        name="tripType"
+                        value="one-way"
+                        tripType={tripType}
+                        handleSetTripType={handleSetTripType}
+                      />
+                      <RadioField
+                        id="two-way"
+                        label="رفت و برگشت"
+                        name="tripType"
+                        value="two-way"
+                        tripType={tripType}
+                        handleSetTripType={handleSetTripType}
+                        handleCloseTripType={handleCloseTripType}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="fixed inset-0 z-10 bg-black opacity-30 md:bg-none md:opacity-0"
+                    onClick={handleCloseTripType}
+                  />
+                </>
+              ) : (
+                ""
+              )}
             </div>
             <div className="flex flex-col gap-4 xs:justify-between xl:flex-row ">
               {/* Choose origin and destination */}
               <div className="relative border border-[#a0a2aa] rounded-lg xl:flex  xl:w-120 xl:h-14 ">
-                <span className="absolute top-11.5 right-3 text-[12px] font-normal text-[#040A1F99] bg-white pr-1 pl-1 xl:-top-3 xl:right-63">مقصد</span>
+                <span className="absolute top-11.5 right-3 text-[12px] font-normal text-[#040A1F99] bg-white pr-1 pl-1 xl:-top-3 xl:right-63">
+                  مقصد
+                </span>
                 <div className="border-b border-[#a0a2aa] p-4 xl:flex-1 xl:border-none ">
                   <Button>مبدا</Button>
                 </div>
@@ -69,7 +144,9 @@ export default function HeroSection() {
               </div>
               {/* Number of passengers */}
               <div className="relative border border-[#a0a2aa] rounded-lg p-4 xl:w-46 xl:h-14">
-                <span className="absolute -top-3 right-3 text-[12px] font-normal text-[#040A1F99] bg-white pr-1 pl-1">تعداد مسافر</span>
+                <span className="absolute -top-3 right-3 text-[12px] font-normal text-[#040A1F99] bg-white pr-1 pl-1">
+                  تعداد مسافر
+                </span>
                 <Button>
                   <span>x مسافر</span>
                 </Button>
