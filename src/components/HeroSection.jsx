@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "./Button";
 import SwapVert from "./icons/SwapVert";
 import RadioField from "./RadioField";
@@ -7,7 +7,12 @@ import LocationSelector from "./HeroSection/LocationSelector";
 export default function HeroSection() {
   const [isTripTypeOpen, setIsTripTypeOpen] = useState(false);
   const [tripType, setTriptype] = useState("one-way");
+  const [isOriginOpen, setIsOriginOpen] = useState(false);
+  const [originQuery, setOriginQuery] = useState("");
+  const [origins, setOrigins] = useState([])
+  // const [origin, setOrigin] = useState("");
 
+  // Handle TripType
   function handleOpenTripType() {
     return setIsTripTypeOpen((curr) => !curr);
   }
@@ -22,16 +27,36 @@ export default function HeroSection() {
       setIsTripTypeOpen(false);
     }
   }
+  // Handle TripType //
 
-  // useEffect(
-  //   function () {
-  //     async function handleCloseTripType() {
-  //       setIsTripTypeOpen(false)
-  //     }
-  //     handleCloseTripType();
-  //   },
-  //   [tripType],
-  // );
+  // Handle Input Change //
+  function handleInputChange(e){
+    setOriginQuery(e)
+  }
+  // Handle Input Change //
+
+  //Handle Origin //
+  function handleOpenOrigin() {
+    return setIsOriginOpen((curr) => !curr);
+  }
+  function handleCloseOrigin() {
+    return setIsOriginOpen(false);
+  }
+ 
+  useEffect(
+    function () {
+      async function fetchOrigin() {
+        const res = await fetch(`https://snapptrip-json-server.vercel.app/api/cities?search=${originQuery}`)
+        const data = await res.json()
+        setOrigins(data)
+        console.log(data)
+      }
+      fetchOrigin();
+      
+    },
+    [originQuery],
+  );
+  //Handle Origin //
 
   return (
     <>
@@ -126,8 +151,18 @@ export default function HeroSection() {
                   مقصد
                 </span>
                 <div className="border-b border-[#a0a2aa] p-4 xl:flex-1 xl:border-none ">
-                  <Button>مبدا</Button>
-                  <LocationSelector />
+                  <Button onClick={handleOpenOrigin} className="w-full text-right">مبدا</Button>
+                  {isOriginOpen ? (
+                    <>
+                      <LocationSelector handleInputChange={handleInputChange} origins={origins}/>
+                      <div
+                        className="fixed inset-0 z-10 bg-black opacity-30 md:bg-none md:opacity-0"
+                        onClick={handleCloseOrigin}
+                      />
+                    </>
+                  ) : (
+                    ""
+                  )}
                 </div>
 
                 <Button className="absolute left-5 top-11 bg-white xl:top-4 xl:left-60 xl:rotate-90">

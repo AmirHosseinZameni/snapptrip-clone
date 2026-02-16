@@ -1,6 +1,6 @@
 import LocationItem from "./LocationItem";
 
-export default function LocationSelector() {
+export default function LocationSelector({ handleInputChange, origins }) {
   return (
     <div className="shadow-2xl rounded-lg bg-white fixed inset-0 z-50 flex flex-col md:absolute md:inset-auto md:right-0 md:w-80 md:h-96 md:-top-4">
       {/* Header */}
@@ -16,6 +16,7 @@ export default function LocationSelector() {
           type="text"
           placeholder="جستجوی مبدا"
           className="h-16 w-full bg-transparent outline-none font-medium"
+          onChange={(e) => handleInputChange(e.target.value)}
         />
         <img
           src="/assets/magnifying-icon.svg"
@@ -26,26 +27,14 @@ export default function LocationSelector() {
 
       {/* Results */}
       <ul className="flex flex-col gap-6 overflow-y-auto flex-1 mr-6 mt-8 md:mr-0 md:mt-4 md:pr-4">
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
-        <LocationItem />
+        {origins.map(({ id, name: city, country, airports }) => (
+          <LocationItem
+            key={id}
+            city={city}
+            country={country}
+            airport={airports?.[0]?.name}
+          />
+        ))}
       </ul>
     </div>
   );
