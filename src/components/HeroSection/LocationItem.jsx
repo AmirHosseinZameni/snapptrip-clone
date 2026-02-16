@@ -1,6 +1,15 @@
-export default function LocationItem({  city, country, airport }) {
+export default function LocationItem({
+  city,
+  country,
+  airport,
+  code,
+  handleSetOrigin,
+}) {
   return (
-    <li className="h-12 flex gap-4 justify-start items-center shrink-0 cursor-pointer">
+    <li
+      className="h-12 flex gap-4 justify-start items-center shrink-0 cursor-pointer"
+      onClick={() => handleSetOrigin({ city, country, code })}
+    >
       {/* Location icon */}
       <div>
         <img src="/assets/map-icon.svg" alt="yo" className="w-4 h-4" />
@@ -14,7 +23,9 @@ export default function LocationItem({  city, country, airport }) {
         </div>
         {/* Airports */}
         <div>
-          <span className="font-medium text-sm text-[#040a1f99]">{airport}</span>
+          <span className="font-medium text-sm text-[#040a1f99]">
+            {airport}
+          </span>
         </div>
       </div>
     </li>

@@ -1,6 +1,6 @@
 import LocationItem from "./LocationItem";
 
-export default function LocationSelector({ handleInputChange, origins }) {
+export default function LocationSelector({ handleInputChange, origins,handleSetOrigin }) {
   return (
     <div className="shadow-2xl rounded-lg bg-white fixed inset-0 z-50 flex flex-col md:absolute md:inset-auto md:right-0 md:w-80 md:h-96 md:-top-4">
       {/* Header */}
@@ -33,6 +33,9 @@ export default function LocationSelector({ handleInputChange, origins }) {
             city={city}
             country={country}
             airport={airports?.[0]?.name}
+            handleSetOrigin={handleSetOrigin}
+            code={airports?.[0]?.code}
+            
           />
         ))}
       </ul>
