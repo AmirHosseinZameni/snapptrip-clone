@@ -3,12 +3,12 @@ export default function LocationItem({
   country,
   airport,
   code,
-  handleSetOrigin,
+  handleSetLocation,
 }) {
   return (
     <li
       className="h-12 flex gap-4 justify-start items-center shrink-0 cursor-pointer"
-      onClick={() => handleSetOrigin({ city, country, code })}
+      onClick={() => handleSetLocation({ city, country, code })}
     >
       {/* Location icon */}
       <div>

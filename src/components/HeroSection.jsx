@@ -1,14 +1,18 @@
 import { useState } from "react";
 import Button from "./Button";
-import Origin from "./HeroSection/Origin";
+import Location from "./HeroSection/Location";
 import TripTypeButton from "./HeroSection/TripTypeButton";
+import SwapVert from "./icons/SwapVert";
 
 export default function HeroSection() {
   const [tripType, setTriptype] = useState("one-way");
-  const[origin, setOrigin] = useState(null)
+  const [origin, setOrigin] = useState(null);
+  const [destination, setDestiation] = useState(null);
 
-
-
+  function handleSwap(){
+    setOrigin(destination)
+    setDestiation(origin)
+  }
 
   return (
     <>
@@ -30,7 +34,21 @@ export default function HeroSection() {
             <TripTypeButton tripType={tripType} setTriptype={setTriptype} />
             <div className="flex flex-col gap-4 xs:justify-between xl:flex-row ">
               {/* Choose origin and destination */}
-              <Origin setOrigin={setOrigin} origin={origin} />
+
+              <div className="relative border border-[#a0a2aa] rounded-lg xl:flex  xl:w-120 xl:h-14 ">
+                <span className="absolute top-11.5 right-3 text-[12px] font-normal text-[#040A1F99] bg-white pr-1 pl-1 xl:-top-3 xl:right-63">
+                  مقصد
+                </span>
+                <Location setOrigin={setOrigin} origin={origin} name="مبدا"/>
+
+                <Button className="absolute left-5 top-11 bg-white xl:top-4 xl:left-60 xl:rotate-90">
+                  <SwapVert handleSwap={handleSwap} />
+                </Button>
+                <Location setDestiation={setDestiation} destination={destination} name="مقصد"/>
+                {/* <div className=" p-4  xl:flex-1">
+                  <Button>مقصد</Button>
+                </div> */}
+              </div>
               {/* Trip date */}
               <div className="border border-[#a0a2aa] rounded-lg p-4 xl:w-78 xl:h-14">
                 <Button>
