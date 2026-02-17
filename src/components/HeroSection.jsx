@@ -9,9 +9,9 @@ export default function HeroSection() {
   const [origin, setOrigin] = useState(null);
   const [destination, setDestiation] = useState(null);
 
-  function handleSwap(){
-    setOrigin(destination)
-    setDestiation(origin)
+  function handleSwap() {
+    setOrigin(destination);
+    setDestiation(origin);
   }
 
   return (
@@ -36,15 +36,19 @@ export default function HeroSection() {
               {/* Choose origin and destination */}
 
               <div className="relative border border-[#a0a2aa] rounded-lg xl:flex  xl:w-120 xl:h-14 ">
-                <span className="absolute top-11.5 right-3 text-[12px] font-normal text-[#040A1F99] bg-white pr-1 pl-1 xl:-top-3 xl:right-63">
+                <span className="absolute z-10 bg-white top-11.5 right-3 text-xs font-normal text-[#040A1F99] pr-1 pl-1 xl:-top-2.5 xl:right-63">
                   مقصد
                 </span>
-                <Location setOrigin={setOrigin} origin={origin} name="مبدا"/>
+                <Location setOrigin={setOrigin} origin={origin} name="مبدا" className="border-b border-[#a0a2aa]"/>
 
                 <Button className="absolute left-5 top-11 bg-white xl:top-4 xl:left-60 xl:rotate-90">
                   <SwapVert handleSwap={handleSwap} />
                 </Button>
-                <Location setDestiation={setDestiation} destination={destination} name="مقصد"/>
+                <Location
+                  setDestiation={setDestiation}
+                  destination={destination}
+                  name="مقصد"
+                />
                 {/* <div className=" p-4  xl:flex-1">
                   <Button>مقصد</Button>
                 </div> */}

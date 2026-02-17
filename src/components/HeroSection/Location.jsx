@@ -8,6 +8,7 @@ export default function Location({
   setDestiation = null,
   destination = null,
   name = null,
+  className
 }) {
   const [isLocationOpen, setIsLocationOpen] = useState(false);
   const [locationQuery, setLocationQuery] = useState("");
@@ -46,23 +47,14 @@ export default function Location({
     },
     [locationQuery],
   );
-
+// border-b border-[#a0a2aa]
   return (
-    <div className="border-b border-[#a0a2aa] p-4 xl:flex-1 xl:border-none ">
+    <div className={`relative p-4 xl:flex-1 xl:border-none ${className} `}>
       <Button onClick={handleOpenLocation} className="w-full text-right">
-        {/* {origin || destiation
-          ? origin
-            ? `${origin.city}، ${origin.country}`
-            : `${destiation.city}، ${destiation.country}`
-          : name} */
+        {
          origin? `${origin.city}، ${origin.country}`: name &&
          destination ? `${destination.city}، ${destination.country}`: name
-          
           }
-         
-         
-
-
 
       </Button>
       {isLocationOpen ? (
