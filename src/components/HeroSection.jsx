@@ -3,11 +3,14 @@ import Button from "./Button";
 import Location from "./HeroSection/Location";
 import TripTypeButton from "./HeroSection/TripTypeButton";
 import SwapVert from "./icons/SwapVert";
+import Example from "./HeroSection/CalendarPopup";
 
 export default function HeroSection() {
   const [tripType, setTriptype] = useState("one-way");
   const [origin, setOrigin] = useState(null);
   const [destination, setDestiation] = useState(null);
+    const [range, setRange] = useState(null); // برای ذخیره موقت محدوده انتخاب شده در مودال
+
 
   function handleSwap() {
     setOrigin(destination);
@@ -54,10 +57,11 @@ export default function HeroSection() {
                 </div> */}
               </div>
               {/* Trip date */}
-              <div className="border border-[#a0a2aa] rounded-lg p-4 xl:w-78 xl:h-14">
-                <Button>
+              <div className="relative border border-[#a0a2aa] rounded-lg p-4 xl:w-78 xl:h-14">
+                {/* <Button>
                   <span>تاریخ رفت</span>
-                </Button>
+                </Button> */}
+                <Example range={range} setRange={setRange} />
               </div>
               {/* Number of passengers */}
               <div className="relative border border-[#a0a2aa] rounded-lg p-4 xl:w-46 xl:h-14">
