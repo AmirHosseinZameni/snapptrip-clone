@@ -115,7 +115,7 @@ export default function Example({ range, setRange }) {
 
   // هندل تغییر در حالت دسکتاپ
   const handleDesktopChange = (newRange) => {
-    setRange(formatRangeForStorage(newRange));
+    setTempRange(newRange); // فقط tempRange
   };
 
   return (
@@ -193,7 +193,7 @@ export default function Example({ range, setRange }) {
                   locale={persian_fa}
                   numberOfMonths={2}
                   range
-                  value={parseRangeForCalendar()}
+                  value={tempRange}
                   onChange={handleDesktopChange}
                   mapDays={({ date }) => {
                     const jsDate = date.toDate();
