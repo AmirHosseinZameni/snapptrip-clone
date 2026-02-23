@@ -4,6 +4,7 @@ import Location from "./HeroSection/Location";
 import TripTypeButton from "./HeroSection/TripTypeButton";
 import SwapVert from "./icons/SwapVert";
 import Example from "./HeroSection/CalendarPopup";
+import PassengerSelector from "./HeroSection/PassengerSelector";
 
 export default function HeroSection() {
   const [tripType, setTriptype] = useState("one-way");
@@ -68,9 +69,7 @@ export default function HeroSection() {
                 <span className="absolute -top-3 right-3 text-[12px] font-normal text-[#040A1F99] bg-white pr-1 pl-1">
                   تعداد مسافر
                 </span>
-                <Button>
-                  <span>x مسافر</span>
-                </Button>
+                <PassengerSelector/>
               </div>
               <Button className="bg-[#ED071A] text-white pt-3 pb-3 pr-4 pl-4 border rounded-lg xl:w-24 xl:h-14">
                 <span>جستجو</span>
