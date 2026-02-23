@@ -10,8 +10,8 @@ export default function HeroSection() {
   const [tripType, setTriptype] = useState("one-way");
   const [origin, setOrigin] = useState(null);
   const [destination, setDestiation] = useState(null);
-    const [range, setRange] = useState(null); // برای ذخیره موقت محدوده انتخاب شده در مودال
-
+  const [range, setRange] = useState(null);
+  const [passengers, setPassengers] = useState({});
 
   function handleSwap() {
     setOrigin(destination);
@@ -43,7 +43,12 @@ export default function HeroSection() {
                 <span className="absolute z-10 bg-white top-11.5 right-3 text-xs font-normal text-[#040A1F99] pr-1 pl-1 xl:-top-2.5 xl:right-63">
                   مقصد
                 </span>
-                <Location setOrigin={setOrigin} origin={origin} name="مبدا" className="border-b border-[#a0a2aa]"/>
+                <Location
+                  setOrigin={setOrigin}
+                  origin={origin}
+                  name="مبدا"
+                  className="border-b border-[#a0a2aa]"
+                />
 
                 <Button className="absolute left-5 top-11 bg-white xl:top-4 xl:left-60 xl:rotate-90">
                   <SwapVert handleSwap={handleSwap} />
@@ -65,11 +70,11 @@ export default function HeroSection() {
                 <Example range={range} setRange={setRange} />
               </div>
               {/* Number of passengers */}
-              <div className="relative border border-[#a0a2aa] rounded-lg p-4 xl:w-46 xl:h-14">
+              <div className="relative border border-[#a0a2aa] rounded-lg p-4 xl:w-46 xl:h-14 flex justify-center">
                 <span className="absolute -top-3 right-3 text-[12px] font-normal text-[#040A1F99] bg-white pr-1 pl-1">
                   تعداد مسافر
                 </span>
-                <PassengerSelector/>
+                <PassengerSelector setPassengers={setPassengers}/>
               </div>
               <Button className="bg-[#ED071A] text-white pt-3 pb-3 pr-4 pl-4 border rounded-lg xl:w-24 xl:h-14">
                 <span>جستجو</span>
