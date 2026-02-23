@@ -74,7 +74,7 @@ export default function PassengerSelector({ setPassengers }) {
             className="fixed inset-0 z-10 bg-black opacity-30 md:bg-none md:opacity-0"
             onClick={handleIsOpen}
           />
-          <div className="fixed top-0 z-20 left-0 w-screen  bg-white p-6 flex flex-col justify-between gap-4 md:absolute md:size-auto md:w-84">
+          <div className="fixed inset-0 z-20 left-0 w-screen  bg-white p-6 flex flex-col justify-between gap-4 md:absolute md:size-auto md:w-84">
             <div className="flex gap-2">
               <Button className="md:hidden">
                 <img

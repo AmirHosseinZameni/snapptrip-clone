@@ -151,7 +151,7 @@ export default function Example({ range, setRange }) {
               </div>
 
               {/* محتوای مودال - تقویم */}
-              <div className="flex-1 overflow-y-auto  p-4 ">
+              <div className="flex-1 overflow-y-auto w-full p-4 flex justify-center ">
                 <Calendar
                   className="border-none! shadow-none! w-full"
                   plugins={[weekends()]}
