@@ -63,20 +63,20 @@ export default function HeroSection() {
                 </div> */}
               </div>
               {/* Trip date */}
-              <div className="relative border border-[#a0a2aa] rounded-lg p-4 xl:w-78 xl:h-14">
+              <div className="relative border border-[#a0a2aa] rounded-lg  xl:w-78 xl:h-14">
                 {/* <Button>
                   <span>تاریخ رفت</span>
                 </Button> */}
                 <Example range={range} setRange={setRange} />
               </div>
               {/* Number of passengers */}
-              <div className="relative border border-[#a0a2aa] rounded-lg p-4 xl:w-46 xl:h-14 flex justify-center">
+              <div className="relative border border-[#a0a2aa] rounded-lg xl:w-46 xl:h-14 flex justify-center">
                 <span className="absolute -top-3 right-3 text-[12px] font-normal text-[#040A1F99] bg-white pr-1 pl-1">
                   تعداد مسافر
                 </span>
                 <PassengerSelector setPassengers={setPassengers}/>
               </div>
-              <Button className="bg-[#ED071A] text-white pt-3 pb-3 pr-4 pl-4 border rounded-lg xl:w-24 xl:h-14">
+              <Button className="bg-[#ED071A] text-white pt-3 pb-3 pr-4 pl-4 border rounded-lg xl:w-24 xl:h-14 cursor-pointer">
                 <span>جستجو</span>
               </Button>
             </div>

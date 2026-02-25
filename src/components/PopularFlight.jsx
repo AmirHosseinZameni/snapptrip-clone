@@ -2,7 +2,7 @@ import DropIcon from "./DropIcon";
 
 export default function PopularFlight() {
   return (
-    <div className="flex items-center gap-4 py-1">
+    <div className="flex items-center gap-4 py-1 cursor-pointer">
       <div>
         <img
           src="/assets/popularFlight.png"

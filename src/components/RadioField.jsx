@@ -8,7 +8,7 @@ export default function RadioField({
   
 }) {
   return (
-    <div className="flex gap-3 items-center">
+    <div className="flex gap-3 items-center ">
       <input
         type="radio"
         id={id}
@@ -16,9 +16,9 @@ export default function RadioField({
         value={value}
         checked={value === tripType}
         onClick={(e) => handleSetTripType(e.target.value)}
-        className="appearance-none w-3 h-3 rounded-full border checked:border-blue-500 checked:bg-blue-500 checked:p-0.5 checked:bg-clip-content "
+        className="appearance-none w-3 h-3 rounded-full border checked:border-blue-500 checked:bg-blue-500 checked:p-0.5 checked:bg-clip-content cursor-pointer"
       />
-      <label htmlFor={id} className="w-full">{label}</label>
+      <label htmlFor={id} className="w-full cursor-pointer">{label}</label>
     </div>
   );
 }

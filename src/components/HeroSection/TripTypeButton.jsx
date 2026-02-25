@@ -22,7 +22,7 @@ export default function TripTypeButton({ tripType, setTriptype }) {
     <div className="pb-6 xs:pb-0 md:relative">
       <Button
         onClick={handleOpenTripType}
-        className="flex gap-2 items-center text-[#575EFF] border pt-1 rounded-4xl pb-1 pr-3 pl-2 text-[14px] font-medium h-8 max-w-33"
+        className="flex gap-2 items-center text-[#575EFF] border pt-1 rounded-4xl pb-1 pr-3 pl-2 text-[14px] font-medium h-8 max-w-33 cursor-pointer"
       >
         <span>{tripType === "one-way" ? "یک‌طرفه" : "رفت و برگشت"}</span>
         <span>
@@ -55,7 +55,7 @@ export default function TripTypeButton({ tripType, setTriptype }) {
           <div className="shadow-lg bg-white p-4 w-full fixed bottom-0 left-0 z-50 rounded-t-xl md:absolute md:max-w-56 md:top-full md:right-0 md:bg-white md:h-38 md:rounded-xl ">
             <div className="flex justify-between mb-4">
               <span className="font-medium">نوع مسیر</span>
-              <span onClick={handleCloseTripType}>x</span>
+              <span onClick={handleCloseTripType} className="cursor-pointer">x</span>
             </div>
             <div className="flex flex-col gap-4">
               <RadioField

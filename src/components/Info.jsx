@@ -63,7 +63,7 @@ export default function Info() {
               بهترین قیمت، در کمترین زمان و به مطمئن‌ترین روش خریداری کنید.
             </p>
           </div>
-          <Button className="flex items-center font-medium text-sm" onClick={handleSetOpen}>
+          <Button className="flex items-center font-medium text-sm cursor-pointer" onClick={handleSetOpen}>
             <span className="text-[#575EFF]">{isOpen ? "مشاهده کمتر" : "مشاهده بیشتر"}</span>
             <DropIcon color="#575EFF" className={isOpen? "rotate-180" : ""} />
           </Button>

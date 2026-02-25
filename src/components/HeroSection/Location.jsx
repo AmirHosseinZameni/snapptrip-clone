@@ -49,8 +49,8 @@ export default function Location({
   );
 // border-b border-[#a0a2aa]
   return (
-    <div className={`relative p-4 xl:flex-1 xl:border-none ${className} `}>
-      <Button onClick={handleOpenLocation} className="w-full text-right">
+    <div className={`relative  xl:flex-1 xl:border-none  ${className} `}>
+      <Button onClick={handleOpenLocation} className="w-full text-right h-13.5 pr-4 cursor-pointer">
         {
          origin? `${origin.city}، ${origin.country}`: name &&
          destination ? `${destination.city}، ${destination.country}`: name

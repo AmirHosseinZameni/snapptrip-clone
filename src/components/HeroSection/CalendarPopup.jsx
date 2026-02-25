@@ -122,7 +122,7 @@ export default function Example({ range, setRange }) {
     <>
       {/* دکمه باز کردن تقویم */}
       <div onClick={openCalendar} className="cursor-pointer">
-        <Button>
+        <Button className="cursor-pointer h-13.5 pr-4">
           <span>{getDateText()}</span>
         </Button>
       </div>
@@ -207,13 +207,13 @@ export default function Example({ range, setRange }) {
               <div className="flex gap-3 w-full p-3 border-t">
                 <button
                   onClick={handleDesktopConfirm}
-                  className="flex-1 bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                  className="flex-1 bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors cursor-pointer"
                 >
                   تایید
                 </button>
                 <button
                   onClick={handleDesktopCancel}
-                  className="flex-1 bg-gray-100 text-gray-700 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+                  className="flex-1 bg-gray-100 text-gray-700 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors cursor-pointer"
                 >
                   انصراف
                 </button>

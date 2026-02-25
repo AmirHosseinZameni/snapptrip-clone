@@ -6,7 +6,7 @@ export default function FlightPrice() {
       <p className="text-[14px] font-medium">
         از <span className="text-[16px] ">555,555,000</span> تومان
       </p>
-      <Button className="bg-[#ED071A] text-white rounded-lg pt-1.5 pb-1.5 pr-4 pl-4">
+      <Button className="bg-[#ED071A] text-white rounded-lg pt-1.5 pb-1.5 pr-4 pl-4 cursor-pointer">
         <span className="text-[14px] font-medium">لیست پروازها</span>
       </Button>
     </div>
